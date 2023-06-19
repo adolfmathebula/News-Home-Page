@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Home Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <img src="/assets/images/logo.svg" alt="News Page" id="logo" />
+
+        <ul class="links-desktop">
+            <li>Home</li>
+            <li>New</li>
+            <li>Popular</li>
+            <li>Trending</li>
+            <li>Categories</li>
+        </ul>
+
+        <div class="show-mobile-menu" onclick="toogleMobileMenu()">
+            <img src="/assets/images/icon-menu.svg" id="open" />
+            <img src="/assets/images/icon-menu-close.svg" id="close" />
+        </div>
+
+        <ul class="links-mobile">
+            <li>Home</li>
+            <li>New</li>
+            <li>Popular</li>
+            <li>Trending</li>
+            <li>Categories</li>
+        </ul>
+
+    </nav>
+
+    <main>
+        <section class="items">
+            <div class="item item-1"></div>
+            <div class="item item-2">
+                <h1>New</h1>
+                <h3>Hydrogen vs Electric Cars</h3>
+                <p>Will hydrogen-fueled cars ever catch up tp EVs</p>
+                <div class="line"></div>
+                <h3>The Downside of AI Artistry</h3>
+                <p>What are the possible adverse effects of on-demand ai image generation</p>
+                <div class="line"></div>
+                <h3>Is VC funding Drying Up?</h3>
+                <p>Private funding by VC firms is down 50% YOY. We take a loot at what that means.</p>
+
+            </div>
+            <div class="item item-3">The Bright Future of Web 3.0</div>
+            <div class="item item-4">
+                <p>We dive into the next evolution of the web that claims to put power of the platform back in the hands
+                    of
+                    the people. But is it really fulfilling its promise?</p>
+                <button>Read More</button>
+            </div>
+        </section>
+        <section id="featured">
+            <div class="featured-item">
+                <img src="/assets//images/image-retro-pcs.jpg" class="featured-item-image" />
+                <div class="featured-item-info">
+                    <h3>01</h3>
+                    <h4>Reviving Retro PC's</h4>
+                    <p>What happens when old PCs are given modern upgrades?</p>
+                </div>
+            </div>
+            <div class="featured-item">
+                <img src="/assets/images/image-top-laptops.jpg" class="featured-item-image" />
+                <div class="featured-item-info">
+                    <h3>02</h3>
+                    <h4>Top 10 Laptops of 2022</h4>
+                    <p>Our best picks for various needs and budgets</p>
+                </div>
+            </div>
+            <div class="featured-item">
+                <img src="/assets/images/image-gaming-growth.jpg" class="featured-item-image" />
+                <div class="featured-item-info">
+                    <h3>03</h3>
+                    <h4>The Growth of Gaming</h4>
+                    <p>How the pandemic has spiked fresh opportunities</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="text/javascript">
+
+        var x = document.getElementById("open");
+
+        function toogleMobileMenu() {
+            if (document.getElementById("open").style.display === "flex") {
+                document.getElementById("open").style.display = "none";
+                document.getElementById("close").style.display = "flex";
+                document.querySelector('.links-mobile').style.display = "flex";
+            } else {
+                document.getElementById("open").style.display = "flex";
+                document.getElementById("close").style.display = "none";
+                document.querySelector('.links-mobile').style.display = "none";
+            }
+        }
+
+        window.onload = toogleMobileMenu()
+    </script>
+</body>
+
+</html>
